@@ -3,7 +3,7 @@ import math
 import sys
 import traceback
 from discord.ext import commands
-
+from utilities.utilities import Utilities
 
 class CommandErrorHandler(commands.Cog):
     def __init__(self, bot):
@@ -11,6 +11,7 @@ class CommandErrorHandler(commands.Cog):
 
     @commands.Cog.listener()
     async def on_command_error(self, ctx, error):
+        pfx = str(Utilities.prefix())
         # if command has local error handler, return
         if hasattr(ctx.command, 'on_error'):
             return
@@ -23,7 +24,7 @@ class CommandErrorHandler(commands.Cog):
             em = discord.Embed(
                 title="Uh oh! Command not found!",
                 description=
-                f'I cannot find a command named "{command_name[1]}". Please check your seplling or for more help use "<@!960711773407817749> `help`"',
+                f'I cannot find a command named "{command_name[1]}". Please check your seplling or for more help use `{pfx}help`',
                 colour=0xffd1dc)
             return await ctx.send(embed=em)
 
