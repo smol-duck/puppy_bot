@@ -23,7 +23,7 @@ class CommandErrorHandler(commands.Cog):
             em = discord.Embed(
                 title="Uh oh! Command not found!",
                 description=
-                f'I cannot find a command named "{command_name[1]}". Please check your seplling or for more help use `>help`',
+                f'I cannot find a command named "{command_name[1]}". Please check your seplling or for more help use "<@!960711773407817749> `help`"',
                 colour=0xffd1dc)
             return await ctx.send(embed=em)
 
