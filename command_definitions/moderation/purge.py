@@ -32,7 +32,7 @@ async def purge_messages(self, ctx, limit, member):
         await ctx.send(f"Purged {limit} messages from {member.mention}",
                        delete_after=10)
 
-    em = discord.Embed(title="<:p_exclamation03:960875871256862731> Message Purged",
+    em = discord.Embed(title="<:p_exclamation03:964883207600345098> Message Purged",
                        colour=0xffd1dc,
                        timestamp=datetime.datetime.now(tz))
     em.add_field(name="Quantity:", value=limit, inline=False)
