@@ -106,6 +106,7 @@ async def on_member_remove(member):
 async def on_message(message):
 
     pfx = Utilities.prefix()  # Assigns the prefix
+    cog_list = ["general", "nsfw", "owner", "anime", "moderation"]
     if not message.author.bot:  # Checks that message was not sent by a bot
         if message.guild == None:  # Checks if the message was sent in DMs
             pass  # Skips the auto reponder if it was sent in DMs
@@ -113,13 +114,11 @@ async def on_message(message):
         else:
             pass
 
-        if message.content.lower().startswith(
-                pfx
-        ):  # Lowers message to lowercase and checks if it starts with the prefix
-            message.content = message.content[:len(pfx)].lower(
-            ) + message.content[len(pfx):]  # Changes message content
-            if message.content[
-                    6:] == "general" or "owner" or "moderation" or "anime" or "nsfw":
+        words = message.content.lower().split(' ')
+        if len(words) == 2:
+          for word in words:
+            for cog in cog_list:
+              if word == cog:
                 message.content = message.content.title()
 
     await bot.process_commands(message)  # Processes the command
