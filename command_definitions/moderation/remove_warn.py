@@ -51,7 +51,7 @@ async def remove_warn(self, ctx, member, warning):
                 json.dump(members, f, indent=3)
 
             em = discord.Embed(
-                title="<:p_exclamation03:960875871256862731> Warning Removed",
+                title="<:p_exclamation03:964883207600345098> Warning Removed",
                 description=
                 f"{member.mention}'s warning has been removed",
                 colour=0xffd1dc,
