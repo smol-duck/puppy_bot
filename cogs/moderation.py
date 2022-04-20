@@ -99,7 +99,7 @@ class Moderation(commands.Cog):
 
         tz = Utilities.timezone()
 
-        em = discord.Embed(title="<:p_exclamation03:960875871256862731> __Member Banned__",
+        em = discord.Embed(title="<:p_exclamation03:964883207600345098> __Member Banned__",
                        color=0xffd1dc,
                        timestamp=datetime.datetime.now(tz))
         em.add_field(name="User:", value=user, inline=False)
@@ -128,7 +128,7 @@ class Moderation(commands.Cog):
 
         tz = Utilities.timezone()
 
-        em = discord.Embed(title="<:p_exclamation03:960875871256862731> __Member Unbanned__",
+        em = discord.Embed(title="<:p_exclamation03:964883207600345098> __Member Unbanned__",
                        color=0xffd1dc,
                        timestamp=datetime.datetime.now(tz))
         em.add_field(name="User:", value=user, inline=False)
