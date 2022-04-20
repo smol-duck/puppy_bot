@@ -38,7 +38,7 @@ async def mute_member(self, ctx, member, duration, reason):
 
         if r.status_code in range(200, 299):
 
-            em = discord.Embed(title="<:p_exclamation03:960875871256862731> __Member Muted__",
+            em = discord.Embed(title="<:p_exclamation03:964883207600345098> __Member Muted__",
                        color=0xffd1dc,
                        timestamp=datetime.datetime.now(tz))
             em.add_field(name="User:", value=member, inline=False)
